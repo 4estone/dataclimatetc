@@ -14,7 +14,7 @@ Disponibles au format [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values
 
 On est parti pour le parquet!  
 Un simple glissé/déposé dans QGIS permet une visualisation directe des données alphanumériques.  
-![cc7a52908d4e2794aa8c5394f075ed57.png](../_resources/cc7a52908d4e2794aa8c5394f075ed57.png)
+![cc7a52908d4e2794aa8c5394f075ed57.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/cc7a52908d4e2794aa8c5394f075ed57.png)
 
 #### Première analyse
 
@@ -33,7 +33,7 @@ Un simple glissé/déposé dans QGIS permet une visualisation directe des donné
 
 On va faire tout çà en une requête SQL dans le gestionnaire de base de données de QGIS:
 
-```
+```sql
 SELECT 
     CAST(full.lon AS TEXT) || CAST(full.lat as TEXT) || COALESCE(full.name, '') AS id,
     full.category,
@@ -74,14 +74,14 @@ GROUP BY
 
 On charge le résultat en tant que couche virtuelle, puis enregistrer ce résultat dans un geopackage.
 
-![276094fbdd8e276ab93d11559ede0628.png](../_resources/276094fbdd8e276ab93d11559ede0628.png)
+![276094fbdd8e276ab93d11559ede0628.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/276094fbdd8e276ab93d11559ede0628.png)
 #### Représentation cartographique
 La valeur à représenter est le maximum de PFAS rencontré pour un point de mesure.La plage de valeurs s'étire de quelques centième de nanogramme à 80000000 (!). Le choix d'une représentation par échelle logarithmique s'impose donc.
-![7feb423f7bced8dbc836204f09c9be08.png](../_resources/7feb423f7bced8dbc836204f09c9be08.png)
+![7feb423f7bced8dbc836204f09c9be08.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/7feb423f7bced8dbc836204f09c9be08.png)
 
 Et voilà! Une carte dynamique à votre main vous permettant d'explorer tranquillement les données.
 
-![45732e60b92fe57020847956a508943f.png](../_resources/45732e60b92fe57020847956a508943f.png)
+![45732e60b92fe57020847956a508943f.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/45732e60b92fe57020847956a508943f.png)
 
 Mais ce n'est pas fini. Il faut rendre accessible toutes les valeurs mesurées sur un même point.
 On repart dans le gestionnaire de base de données pour une autre requête SQL, objectifs:
@@ -107,11 +107,11 @@ GROUP BY
 
 On charge le résultat en tant que couche virtuelle, puis on enregistre ce résultat dans le geopackage existant.
 
-![6247f2b343a4ef327a766aab1a1e17d6.png](../_resources/6247f2b343a4ef327a766aab1a1e17d6.png)
+![6247f2b343a4ef327a766aab1a1e17d6.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/6247f2b343a4ef327a766aab1a1e17d6.png)
 
 #### Mise en place de la relation entre les tables *pfas_value* et *PFAS_sites*
 
-![e2e17e63784f0f9e25eddd6516908cd4.png](../_resources/e2e17e63784f0f9e25eddd6516908cd4.png)
+![e2e17e63784f0f9e25eddd6516908cd4.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/e2e17e63784f0f9e25eddd6516908cd4.png)
 
 Les valeurs individuelles sont maintenant accessibles dans le formulaire d'interrogation individuelle des objets
-![b3972d2aea71241571b886f54e8491fb.png](../_resources/b3972d2aea71241571b886f54e8491fb.png)
+![b3972d2aea71241571b886f54e8491fb.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/b3972d2aea71241571b886f54e8491fb.png)
