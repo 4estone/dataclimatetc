@@ -76,7 +76,8 @@ On charge le résultat en tant que couche virtuelle, puis enregistrer ce résult
 
 ![276094fbdd8e276ab93d11559ede0628.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/276094fbdd8e276ab93d11559ede0628.png)
 #### Représentation cartographique
-La valeur à représenter est le maximum de PFAS rencontré pour un point de mesure.La plage de valeurs s'étire de quelques centième de nanogramme à 80000000 (!). Le choix d'une représentation par échelle logarithmique s'impose donc.
+La valeur à représenter est le maximum de PFAS rencontré pour un point de mesure.La plage de valeurs s'étire de quelques centième de nanogramme à 80000000. Le choix d'une représentation par échelle logarithmique s'impose donc.
+
 ![7feb423f7bced8dbc836204f09c9be08.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/7feb423f7bced8dbc836204f09c9be08.png)
 
 Et voilà! Une carte dynamique à votre main vous permettant d'explorer tranquillement les données.
@@ -87,7 +88,7 @@ Mais ce n'est pas fini. Il faut rendre accessible toutes les valeurs mesurées s
 On repart dans le gestionnaire de base de données pour une autre requête SQL, objectifs:
 - Créer une clé primaire identique à celle créée sur la première requête
 - récupérer les valeurs de PFAS 
-```
+```sql
 SELECT 
     CAST(full.lon AS TEXT) || CAST(full.lat as TEXT) || COALESCE(full.name, '') AS id,
     cast(full.year as integer) as year, 
