@@ -9,7 +9,7 @@ altitude: 0.0000
 
 # ForEverPollution méthodologie 
 
-![62d7f4694011262d9176ff0767ec0795.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/62d7f4694011262d9176ff0767ec0795-2.png)
+![62d7f4694011262d9176ff0767ec0795.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/62d7f4694011262d9176ff0767ec0795.png)
 
 ### Liens et ressources
 
@@ -23,7 +23,7 @@ Disponibles au format [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values
 
 On est parti pour le parquet!  
 Un simple glissé/déposé dans QGIS permet une visualisation directe des données alphanumériques.  
-![cc7a52908d4e2794aa8c5394f075ed57.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/cc7a52908d4e2794aa8c5394f075ed57-2.png)
+![cc7a52908d4e2794aa8c5394f075ed57.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/cc7a52908d4e2794aa8c5394f075ed57.png)
 
 #### Première analyse
 
