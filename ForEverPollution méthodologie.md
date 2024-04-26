@@ -188,10 +188,12 @@ Il ne reste plus qu'à créer une relation pour permettre d'afficher les valeurs
 ![05be529ce625da98c4d9b06e973269a7.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/05be529ce625da98c4d9b06e973269a7.png)
 
 > Point d'attention: compte-tenu du nombre important de données, il est fortement conseillé de créer des index sur les champs utilisés dans les relations entre les 3 tables de la base.  
-> ![2f5b4160320b5fc13d16aff058696709.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/2f5b4160320b5fc13d16aff058696709.png)  
-> ![2a617d85072deb1de69bc8391f67b7e8.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/2a617d85072deb1de69bc8391f67b7e8.png)  
-> ![26e6ad20d7da98baa864de36ad6f7868.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/26e6ad20d7da98baa864de36ad6f7868.png)
-
+```sql
+CREATE INDEX idx_pfas_sites_id ON PFAS_sites (id)
+CREATE INDEX idx_pfas_values_fk_id ON pfas_values (fk_id)
+CREATE INDEX idx_pfas_values_fid ON pfas_values (fid)
+CREATE INDEX idx_pfas_sum_id ON pfas_sum (id)
+```
 Les valeurs chronologiques et par substance individuelle sont maintenant accessibles dans le formulaire d'interrogation des objets
 
 ![94148774b06d85f25d72cd525d0851d7.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/94148774b06d85f25d72cd525d0851d7.png)
