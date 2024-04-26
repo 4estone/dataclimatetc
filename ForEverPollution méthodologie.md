@@ -1,11 +1,3 @@
----
-title: ForEverPollution méthodologie
-updated: 2024-04-26 11:50:54Z
-created: 2024-04-24 08:13:06Z
-latitude: 48.07935890
-longitude: 7.35851200
-altitude: 0.0000
----
 
 # ForEverPollution méthodologie 
 
@@ -83,16 +75,16 @@ GROUP BY
 
 On charge le résultat en tant que couche virtuelle, puis enregistrer ce résultat dans un geopackage.
 
-![276094fbdd8e276ab93d11559ede0628.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/276094fbdd8e276ab93d11559ede0628-2.png)
+![276094fbdd8e276ab93d11559ede0628.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/276094fbdd8e276ab93d11559ede0628.png)
 
 #### Représentation cartographique
 
 La valeur à représenter est le maximum de PFAS rencontré pour un point de mesure.La plage de valeurs s'étire de quelques centième de ng/l à 80000000 . Le choix d'une représentation par échelle logarithmique s'impose donc.  
-![7feb423f7bced8dbc836204f09c9be08.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/7feb423f7bced8dbc836204f09c9be08-2.png)
+![7feb423f7bced8dbc836204f09c9be08.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/7feb423f7bced8dbc836204f09c9be08.png)
 
 Et voilà! Une carte dynamique à votre main vous permettant d'explorer tranquillement les données.
 
-![45732e60b92fe57020847956a508943f.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/45732e60b92fe57020847956a508943f-2.png)
+![45732e60b92fe57020847956a508943f.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/45732e60b92fe57020847956a508943f.png)
 
 Mais ce n'est pas fini. Il faut rendre accessible toutes les valeurs mesurées sur un même point.  
 On repart dans le gestionnaire de base de données pour une autre requête SQL, objectifs:
@@ -119,11 +111,11 @@ GROUP BY
 
 On charge le résultat en tant que couche virtuelle, puis on enregistre ce résultat dans le geopackage existant.
 
-![6247f2b343a4ef327a766aab1a1e17d6.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/6247f2b343a4ef327a766aab1a1e17d6-2.png)
+![6247f2b343a4ef327a766aab1a1e17d6.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/6247f2b343a4ef327a766aab1a1e17d6.png)
 
 Mise en place de la relation entre les tables *pfas_value* et *PFAS_sites*
 
-![e2e17e63784f0f9e25eddd6516908cd4.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/e2e17e63784f0f9e25eddd6516908cd4-1.png)
+![e2e17e63784f0f9e25eddd6516908cd4.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/e2e17e63784f0f9e25eddd6516908cd4.png)
 
 Mais ce n'est pas fini! Le champ *pfas_value* au format json contient les données détaillées par substance. Nous allons les extraires pour créer une table spécifique. Pour ça rien de mieux qu'un petit script en Python. Il se lance à partir de la console Python de QGIS en ayant au préalable sélectionné dans la liste des couches la table *pfas_sum*.
 
@@ -193,16 +185,16 @@ Le fichier CSV résultat est ensuite chargé dans QGIS et exporté dans le geopa
 
 Il ne reste plus qu'à créer une relation pour permettre d'afficher les valeurs par substance dans le sous-sous-formulaire des points de mesure.
 
-![05be529ce625da98c4d9b06e973269a7.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/05be529ce625da98c4d9b06e973269a7-1.png)
+![05be529ce625da98c4d9b06e973269a7.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/05be529ce625da98c4d9b06e973269a7.png)
 
 > Point d'attention: compte-tenu du nombre important de données, il est fortement conseillé de créer des index sur les champs utilisés dans les relations entre les 3 tables de la base.  
-> ![2f5b4160320b5fc13d16aff058696709.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/2f5b4160320b5fc13d16aff058696709-1.png)  
-> ![2a617d85072deb1de69bc8391f67b7e8.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/2a617d85072deb1de69bc8391f67b7e8-1.png)  
-> ![26e6ad20d7da98baa864de36ad6f7868.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/26e6ad20d7da98baa864de36ad6f7868-1.png)
+> ![2f5b4160320b5fc13d16aff058696709.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/2f5b4160320b5fc13d16aff058696709.png)  
+> ![2a617d85072deb1de69bc8391f67b7e8.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/2a617d85072deb1de69bc8391f67b7e8.png)  
+> ![26e6ad20d7da98baa864de36ad6f7868.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/26e6ad20d7da98baa864de36ad6f7868.png)
 
 Les valeurs chronologiques et par substance individuelle sont maintenant accessibles dans le formulaire d'interrogation des objets
 
-![94148774b06d85f25d72cd525d0851d7.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/94148774b06d85f25d72cd525d0851d7-1.png)
+![94148774b06d85f25d72cd525d0851d7.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/94148774b06d85f25d72cd525d0851d7.png)
 
 **Schéma relationnel**
 
