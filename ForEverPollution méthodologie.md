@@ -7,7 +7,7 @@ longitude: 7.35851200
 altitude: 0.0000
 ---
 
-# ForEverPollution méthodologie
+# ForEverPollution méthodologie 
 
 ![62d7f4694011262d9176ff0767ec0795.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/62d7f4694011262d9176ff0767ec0795-2.png)
 
