@@ -155,7 +155,6 @@ class ForEverProcess():
 
     def iterate(self):
         if self.layer:
-            i = 0
             fields = self.layer.fields()
 
             # get the index of the field
@@ -173,9 +172,7 @@ class ForEverProcess():
                         js = json.loads(json_value)
 
                         for l in js:
-                            if isinstance(l["substance"], str):
-                                csv_file.write('{0},{1},{2},{3},{4},{5},{6}\n'.format(fid_value, l["cas_id"], l["unit"],l["isomer"], l["substance"], l["less_than"], l["value"]))
-                                i+=1
+                            csv_file.write('{0},{1},{2},{3},{4},{5},{6}\n'.format(fid_value, l["cas_id"], l["unit"],l["isomer"], l["substance"], l["less_than"], l["value"]))
 
 main()
 
@@ -190,9 +187,10 @@ Il ne reste plus qu'à créer une relation pour permettre d'afficher les valeurs
 > Point d'attention: compte-tenu du nombre important de données, il est fortement conseillé de créer des index sur les champs utilisés dans les relations entre les 3 tables de la base.  
 ```sql
 CREATE INDEX idx_pfas_sites_id ON PFAS_sites (id)
-CREATE INDEX idx_pfas_values_fk_id ON pfas_values (fk_id)
-CREATE INDEX idx_pfas_values_fid ON pfas_values (fid)
+CREATE INDEX idx_pfas_sum_fid ON pfas_sum (fid)
 CREATE INDEX idx_pfas_sum_id ON pfas_sum (id)
+CREATE INDEX idx_pfas_values_fk_id ON pfas_values (fk_id)
+
 ```
 Les valeurs chronologiques et par substance individuelle sont maintenant accessibles dans le formulaire d'interrogation des objets
 
