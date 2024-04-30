@@ -23,7 +23,8 @@ Un autre point significatif de ces publications doit être relevé: elles sont g
 
 ### Des cartes statiques...
 
-Publier un article scientifique définit à de rares exceptions un support cartographique statique de taille limité répondant aux exigences de la production scientifique  
+Publier un article scientifique définit à de rares exceptions un support cartographique statique de taille limité répondant aux exigences de la production scientifique  .
+
 ![a1dd85be8353f2216b15c2f8d7a3a34e.png](https://github.com/4estone/dataclimatetc/blob/main/manifest/_resources/a1dd85be8353f2216b15c2f8d7a3a34e.png)
 
 > La carte constitue une étape incontournable de la production scientifique permettant d’explorer les données, de susciter des questionnements, de valider ou non des hypothèses, d’en susciter de nouvelles pour aboutir à une connaissance visuelle.(F. Bahoken)
@@ -33,11 +34,11 @@ Publier un article scientifique définit à de rares exceptions un support carto
 Les spécificités de chaque domaine étudié, la quantité quasi-illimité de librairies dédiées à la manipulation de données et la formation systématique des scientifiques à ces outils ([R](https://www.r-project.org/), [Python](https://www.python.org/), [Matlab](https://fr.mathworks.com/products/matlab.html), ...)  
 ![PanoramaLLogociel.jpg](https://github.com/4estone/dataclimatetc/blob/main/manifest/_resources/PanoramaLLogociel.jpg)
 
-&nbsp;
 
 ### ...ou bien des cartes dynamiques mais limitées
 
 Dans certains cas (data-journalisme en particulier), des simplifications sont réalisées afin de rendre accessibles une vision cartographique partielle de l'ensemble du thème traité.
+
 ![62d7f4694011262d9176ff0767ec0795.png](https://github.com/4estone/dataclimatetc/blob/main/manifest/_resources/62d7f4694011262d9176ff0767ec0795.png)
 ### Pourquoi ne pas envisager une réutilisation des données  dans un seul et même outils plus dynamique orienté "géographie"? 
 
