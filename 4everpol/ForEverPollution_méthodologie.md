@@ -103,7 +103,7 @@ La valeur à représenter est le maximum de PFAS rencontré pour un point de mes
 
 Et voilà! Une carte dynamique à votre main vous permettant d'explorer tranquillement les données.
 
-![a54c661eace5ece37e988017ee014305.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/a54c661eace5ece37e988017ee014305.png)
+![0c45608c9e364310a0a936777ef7928b.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/0c45608c9e364310a0a936777ef7928b.png)
 
 Mais ce n'est pas fini. Il faut rendre accessible toutes les valeurs mesurées sur un même point.  
 On repart dans le gestionnaire de base de données pour une autre requête SQL, objectifs:
