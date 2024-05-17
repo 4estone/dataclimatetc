@@ -134,7 +134,7 @@ On charge le résultat en tant que couche virtuelle, puis on enregistre ce résu
 
 Mise en place de la relation entre les tables *pfas_value* et *PFAS_sites*
 
-![e2e17e63784f0f9e25eddd6516908cd4.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/e2e17e63784f0f9e25eddd6516908cd4.png)
+![74a211a16f6246179344757be13993ac.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/74a211a16f6246179344757be13993ac.png)
 
 Mais ce n'est pas fini! Le champ *pfas_value* au format json contient les données détaillées par substance. Nous allons les extraires pour créer une table spécifique. Pour ça rien de mieux qu'un petit script en Python. Il se lance à partir de la console Python de QGIS en ayant au préalable sélectionné dans la liste des couches la table *pfas_sum*.
 
