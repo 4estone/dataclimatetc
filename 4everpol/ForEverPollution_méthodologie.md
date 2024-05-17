@@ -1,5 +1,5 @@
 
-![62d7f4694011262d9176ff0767ec0795.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/62d7f4694011262d9176ff0767ec0795-1.png)
+![62d7f4694011262d9176ff0767ec0795.png](https://github.com/4estone/dataclimatetc/blob/main/4everpol/_resources/62d7f4694011262d9176ff0767ec0795.png)
 
 ### Liens et ressources
 
